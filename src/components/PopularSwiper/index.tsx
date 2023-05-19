@@ -46,7 +46,7 @@ function PopularSwiper() {
             <div className="flex justify-between mt-5">
               <p className="sm:text-xl text-lg text-indigo-600">120.000 sum</p>
               <button className="py-1 px-3 bg-indigo-500 text-white rounded-md hover:bg-indigo-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-                {t("trip")}
+                <a href="#orders">{t("trip")}</a>
               </button>
             </div>
           </div>
@@ -63,7 +63,7 @@ function PopularSwiper() {
             <div className="flex justify-between mt-5">
               <p className="sm:text-xl text-lg text-indigo-600">600.000 sum</p>
               <button className="py-1 px-3 bg-indigo-500 text-white rounded-md hover:bg-indigo-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-                {t("trip")}
+                <a href="#orders">{t("trip")}</a>
               </button>
             </div>
           </div>
@@ -72,6 +72,7 @@ function PopularSwiper() {
           <div className="sm:mr-6 mr-0">
             <Image
               src={buxara}
+              height={300}
               alt="Picture of the author"
               className="h-[300px] w-full bg-gray-600 rounded-xl"
             />
@@ -80,7 +81,7 @@ function PopularSwiper() {
             <div className="flex justify-between mt-5">
               <p className="sm:text-xl text-lg text-indigo-600">450.00 sum</p>
               <button className="py-1 px-3 bg-indigo-500 text-white rounded-md hover:bg-indigo-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-                {t("trip")}
+                <a href="#orders">{t("trip")}</a>
               </button>
             </div>
           </div>

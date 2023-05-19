@@ -30,16 +30,21 @@ export default function Index({ locations }: any) {
       </div>
       <div className={`main-bg h-[100vh] ${kalam.className}`}>
         <div className="m-auto px-4 xl:max-w-[1440px] lg:max-w-[1280px]">
+          <a id="main"></a>
           <Header />
           <Main />
         </div>
       </div>
 
       <div className="m-auto px-4 xl:max-w-[1440px] lg:max-w-[1280px]">
+        <a id="orders"></a>
         <Order products={locations.products} />
+        <a id="cities"></a>
         <Popular />
+        <a id="about"></a>
         <About />
         <Recently />
+        <a id="service"></a>
         <Service />
         {/* <Beat /> */}
         <Footer />

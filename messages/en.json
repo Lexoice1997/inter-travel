@@ -12,6 +12,7 @@
     "button": "Explore"
   },
   "Order": {
+    "title": "Orders",
     "first_name": "What is your name?",
     "last_name": "What is you surname?",
     "phone": "What is your phone number?",
@@ -49,5 +50,16 @@
     "title": "We always try to give you are best service",
     "description": "Discover the world with us! Our travel agency will make your dreams come true. Tailor-made tours, comfortable accommodations, unforgettable experiences. Travel with us and experience true freedom!"
   },
-  "Footer": {}
+  "Footer": {
+    "menu0": "Main",
+    "menu1": "Orders",
+    "menu2": "Top cities",
+    "menu3": "About us",
+    "menu4": "Service",
+    "rights": "Continue Inter Travel 2023 all rights reserved.",
+    "follow": "Follow Us On",
+    "menu": "Menu",
+    "address": "NNN",
+    "contact": "Contact"
+  }
 }

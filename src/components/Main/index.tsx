@@ -14,7 +14,7 @@ function Main() {
         <p className="mt-4 text-center lg:text-left">{t("description")}</p>
         <div className="flex justify-center lg:justify-start">
           <button className="bg-[#4D6D44] text-white mt-4 p-4 text-lg rounded-lg hover:bg-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            {t("button")}
+            <a href="#orders">{t("button")}</a>
           </button>
         </div>
       </div>

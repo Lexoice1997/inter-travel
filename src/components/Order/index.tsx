@@ -38,6 +38,7 @@ interface OrderProps {
 }
 
 function Order({ products }: any) {
+  const [status, setStatus] = useState<boolean>(false);
   const [location, setLocation] = useState();
   const [startDate, setStartDate] = useState<any>(new Date());
   const t = useTranslations("Order");
@@ -69,6 +70,7 @@ function Order({ products }: any) {
     }),
     onSubmit: async (values: IForm) => {
       try {
+        setStatus(true);
         const payload = `
         Путешествуйте с нами!%0A
         %0AИмя: ${values.first_name}%0AФамилия: ${values.last_name}%0AНомер Телефона: +${
@@ -93,32 +95,33 @@ function Order({ products }: any) {
               people: values.people,
             }
           );
-          console.log(sendOrder);
           window.location.replace(
             `https://my.click.uz/services/pay?service_id=28015&merchant_id=20412&amount=${sendOrder.data.amount}&transaction_param=${sendOrder.data.transaction_id}`
           );
         } catch {
           toast.success("Произошла ошибка отправки данных.");
+          setStatus(false);
         }
-
         toast.success("Ваша заявка принята.");
       } catch (error) {
         toast.success("Произошла ошибка.");
+        setStatus(false);
       } finally {
         formik.resetForm();
+        setStatus(false);
       }
     },
   });
 
   const handleLocation = (e: any) => {
-    console.log(e);
     setLocation(e.value);
   };
 
   return (
     <section className="sm:mt-24 mt-16">
       <form className={`bg-white p-8 rounded-xl ${inter.className}`} onSubmit={formik.handleSubmit}>
-        <div className="flex justify-between sm:flex-row flex-col items-start ">
+        <h2 className="sm:text-5xl text-3xl text-center font-semibold">{t("title")}</h2>
+        <div className="flex justify-between sm:flex-row flex-col items-start mt-8">
           <div className="sm:w-1/2 w-full sm:mr-10 mr-0">
             <div className="w-full mb-4 sm:mr-10 mr-0">
               <input
@@ -220,10 +223,11 @@ function Order({ products }: any) {
         </div>
 
         <button
+          disabled={status}
           type="submit"
-          className="block mx-auto mt-8 text-semibold sm:text-3xl text-2xl text-white bg-blue-500 sm:px-40 px-16 py-4 rounded-xl hover:bg-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150"
+          className="block mx-auto mt-8 text-semibold sm:text-3xl text-2xl text-white bg-blue-500 sm:px-40 px-16 py-4 rounded-xl disabled:bg-gray-200 hover:bg-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150"
         >
-          {t("button")}
+          {status ? "Loading" : t("button")}
         </button>
       </form>
 
