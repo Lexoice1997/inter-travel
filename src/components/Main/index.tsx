@@ -1,31 +1,29 @@
-'use client'
+"use client";
 
-import { manrope } from '@/pages'
-import { useTranslations } from 'next-intl'
-import React from 'react'
+import { manrope } from "@/pages";
+import { useTranslations } from "next-intl";
+import React from "react";
 
 function Main() {
-  const t = useTranslations('Main')
+  const t = useTranslations("Main");
   const scrollDown = () => {
-    const orderForm = document.querySelector('#order-form')!
-    orderForm.scrollIntoView({ behavior: 'smooth' })
-  }
+    const orderForm = document.querySelector("#order-form")!;
+    orderForm.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section className="flex flex-col lg:justify-between lg:flex-row">
       <div className="lg:mr-4 lg:mt-24 mt-20 lg:w-1/2 w-full ">
-        <h1 className="text-[50px] text-[#4D6D44] font-semibold lg:text-6xl leading-none text-center lg:text-left">
-          {t('title')}
+        <h1 className="text-[50px] text-greenColor font-semibold lg:text-6xl leading-none text-center lg:text-left">
+          {t("title")}
         </h1>
-        <p className={`mt-4 text-center lg:text-left ${manrope.className}`}>
-          {t('description')}
-        </p>
+        <p className={`mt-4 text-center lg:text-left ${manrope.className}`}>{t("description")}</p>
         <div className="flex justify-center lg:justify-start">
           <button
-            className={`bg-[#4D6D44] text-white mt-4 p-4 text-lg rounded-lg hover:bg-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150 ${manrope.className}`}
+            className={`bg-greenColor text-white mt-4 p-4 text-lg rounded-lg hover:bg-hoverGreen hover:cursor-pointer hover:transition-all transition ease-in-out delay-150 ${manrope.className}`}
             onClick={scrollDown}
           >
-            {t('button')}
+            {t("button")}
           </button>
         </div>
 
@@ -49,7 +47,7 @@ function Main() {
         <h2>Russian</h2>
       </Link> */}
     </section>
-  )
+  );
 }
 
-export default Main
+export default Main;

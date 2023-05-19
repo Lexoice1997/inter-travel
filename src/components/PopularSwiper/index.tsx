@@ -1,21 +1,21 @@
-'use client'
+"use client";
 
-import buxara from '@/assets/buxara.jpg'
-import samarkand from '@/assets/samarkand.jpg'
-import xiva from '@/assets/xiva.jpg'
-import { useTranslations } from 'next-intl'
-import Image from 'next/image'
-import { Pagination } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import buxara from "@/assets/buxara.jpg";
+import samarkand from "@/assets/samarkand.jpg";
+import xiva from "@/assets/xiva.jpg";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 function PopularSwiper() {
-  const t = useTranslations('Popular')
+  const t = useTranslations("Popular");
 
   const onClick = (productId: number) => {
-    const orderForm = document.querySelector('#order-form')!
+    const orderForm = document.querySelector("#order-form")!;
     // scroll to form
-    orderForm.scrollIntoView({ behavior: 'smooth' })
-  }
+    orderForm.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
@@ -48,19 +48,12 @@ function PopularSwiper() {
               alt="Picture of the author"
               className="h-[300px] w-full bg-gray-600 rounded-xl"
             />
-            <h3 className="text-2xl sm:text-3xl font-semibold mt-5">
-              {t('xiva')}
-            </h3>
-            <p className="text-lg sm:text-xl font-semibold text-gray-500 mt-5">
-              {t('uzbekistan')}
-            </p>
+            <h3 className="text-2xl sm:text-3xl font-semibold mt-5">{t("xiva")}</h3>
+            <p className="text-lg sm:text-xl font-semibold text-gray-500 mt-5">{t("uzbekistan")}</p>
             <div className="flex justify-between mt-5">
-              <p className="sm:text-xl text-lg text-[#4D6D44]">120.000 sum</p>
-              <button
-                className="py-1 px-3  text-white rounded-md bg-[#4D6D44] hover:bg-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150"
-                onClick={() => onClick(3)}
-              >
-                {t('trip')}
+              <p className="sm:text-xl text-lg text-greenColor">120.000 sum</p>
+              <button className="py-1 px-3 bg-greenColor text-white rounded-md hover:bg-hoverGreen hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+                <a href="#orders">{t("trip")}</a>
               </button>
             </div>
           </div>
@@ -72,19 +65,12 @@ function PopularSwiper() {
               alt="Picture of the author"
               className="h-[300px] w-full bg-gray-600 rounded-xl"
             />
-            <h3 className="text-2xl sm:text-3xl font-semibold mt-5">
-              {t('samarkand')}
-            </h3>
-            <p className="text-lg sm:text-xl font-semibold text-gray-500 mt-5">
-              {t('uzbekistan')}
-            </p>
+            <h3 className="text-2xl sm:text-3xl font-semibold mt-5">{t("samarkand")}</h3>
+            <p className="text-lg sm:text-xl font-semibold text-gray-500 mt-5">{t("uzbekistan")}</p>
             <div className="flex justify-between mt-5">
-              <p className="sm:text-xl text-lg text-[#4D6D44]">600.000 sum</p>
-              <button
-                className="py-1 px-3 bg-[#4D6D44] hover:bg-[#66915A] text-white rounded-md hover:cursor-pointer hover:transition-all transition ease-in-out delay-150"
-                onClick={() => onClick(4)}
-              >
-                {t('trip')}
+              <p className="sm:text-xl text-lg text-greenColor">600.000 sum</p>
+              <button className="py-1 px-3 bg-greenColor text-white rounded-md hover:bg-hoverGreen hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+                <a href="#orders">{t("trip")}</a>
               </button>
             </div>
           </div>
@@ -93,22 +79,16 @@ function PopularSwiper() {
           <div className="sm:mr-6 mr-0">
             <Image
               src={buxara}
+              height={300}
               alt="Picture of the author"
               className="h-[300px] w-full bg-gray-600 rounded-xl"
             />
-            <h3 className="text-2xl sm:text-3xl font-semibold mt-5">
-              {t('buxara')}
-            </h3>
-            <p className="text-lg sm:text-xl font-semibold text-gray-500 mt-5">
-              {t('uzbekistan')}
-            </p>
+            <h3 className="text-2xl sm:text-3xl font-semibold mt-5">{t("buxara")}</h3>
+            <p className="text-lg sm:text-xl font-semibold text-gray-500 mt-5">{t("uzbekistan")}</p>
             <div className="flex justify-between mt-5">
-              <p className="sm:text-xl text-lg text-[#4D6D44]">450.000 sum</p>
-              <button
-                className="py-1 px-3 bg-[#4D6D44] hover:bg-[#66915A] text-white rounded-md hover:cursor-pointer hover:transition-all transition ease-in-out delay-150"
-                onClick={() => onClick(5)}
-              >
-                {t('trip')}
+              <p className="sm:text-xl text-lg text-greenColor">450.00 sum</p>
+              <button className="py-1 px-3 bg-greenColor text-white rounded-md hover:bg-hoverGreen hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+                <a href="#orders">{t("trip")}</a>
               </button>
             </div>
           </div>
@@ -167,7 +147,7 @@ function PopularSwiper() {
         </SwiperSlide> */}
       </Swiper>
     </>
-  )
+  );
 }
 
-export default PopularSwiper
+export default PopularSwiper;

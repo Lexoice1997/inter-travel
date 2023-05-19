@@ -12,6 +12,7 @@
     "button": "Buyurtma qilish"
   },
   "Order": {
+    "title": "Buyurtma",
     "first_name": "Atinigiz?",
     "last_name": "Familiyangiz?",
     "phone": "Telefon raqam?",
@@ -49,5 +50,16 @@
     "title": "Biz har doim sizga eng yaxshi xizmatni taqdim etishga harakat qilamiz",
     "description": "Biz bilan dunyoni kashf eting! Bizning sayyohlik agentligimiz sizning orzularingizni amalga oshiradi. Maxsus turlar, qulay turar joy, unutilmas tajribalar. Biz bilan sayohat qiling va haqiqiy erkinlikni his qiling!"
   },
-  "Footer": {}
+  "Footer": {
+    "menu0": "Bosh sahifa",
+    "menu1": "Buyurtma",
+    "menu2": "Shaxarlar",
+    "menu3": "Biz haqimizda",
+    "menu4": "Xizmatlar",
+    "rights": "Inter Travel 2023 barcha huquqlar himoyalangan.",
+    "follow": "Bizni kuzatib boring",
+    "menu": "Menu",
+    "address": "NNN",
+    "contact": "Kontaktlar"
+  }
 }

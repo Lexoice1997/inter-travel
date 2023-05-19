@@ -5,12 +5,13 @@ import about3 from "@/assets/about-3.jpg";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
+import Title from "../Title/Title";
 
 function About() {
   const t = useTranslations("About");
   return (
     <section className="sm:mt-24 mt-16">
-      <h2 className="sm:text-5xl text-3xl text-center font-semibold">{t("title")}</h2>
+      <Title title={t("title")}/>
       <p className="sm:text-2xl text-lg text-center font-semibold mt-8 text-gray-500">
         {t("description")}
       </p>
@@ -34,7 +35,7 @@ function About() {
       <p className="text-gray-500 text-center sm:w-1/3 w-full m-auto sm:mt-10 sm:text-lg mt-4 text-md">
         {t("info")}
       </p>
-      <div className="flex justify-between sm:w-1/2 m-auto sm:mt-10 mt-6">
+      {/* <div className="flex justify-between sm:w-1/2 m-auto sm:mt-10 mt-6">
         <div>
           <h3 className="text-[#4D6D44] sm:text-4xl text-3xl font-semibold text-center">4.5k+</h3>
           <p className="mt-2 text-md">Our Explores</p>
@@ -47,7 +48,7 @@ function About() {
           <h3 className="text-[#4D6D44] sm:text-4xl text-3xl font-semibold text-center">35k+</h3>
           <p className="mt-2 text-md">Year Experience</p>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
