@@ -1,0 +1,51 @@
+{
+  "Header": {
+    "menu0": "Bosh sahifa",
+    "menu1": "Buyurtma",
+    "menu2": "Shaxarlar",
+    "menu3": "Biz haqimizda",
+    "menu4": "Xizmatlar"
+  },
+  "Main": {
+    "title": "Biz bilan dunyo bo'ylab sayohat qiling",
+    "description": "Biz bilan dunyoni kashf eting! Bizning sayyohlik agentligimiz sizning orzularingizni amalga oshiradi. Maxsus turlar, qulay turar joy, unutilmas tajribalar. Biz bilan sayohat qiling va haqiqiy erkinlikni his qiling!",
+    "button": "Buyurtma qilish"
+  },
+  "Order": {
+    "phone": "Telefon raqam?",
+    "people": "Nechta kishi?",
+    "location": "Qayerga?",
+    "date": "Qachon?",
+    "button": "Buyurtma qilish",
+    "popular": "Kop qidirilganlar",
+    "popular-locations": "Xiva, Samarqand, Buxara, Moynaq"
+  },
+  "Popular": {
+    "title": "Sayohatlar",
+    "xiva": "Xiva",
+    "samarkand": "Samarqand",
+    "buxara": "Buxara",
+    "uzbekistan": "Uzbekistan",
+    "trip": "Sayohatni boshlash"
+  },
+  "About": {
+    "title": "Biz haqimizda",
+    "description": "Dam olish kunlari biz bilan sayohat qiling",
+    "info": "Biz bilan dunyoni kashf eting! Bizning sayyohlik agentligimiz sizning orzularingizni amalga oshiradi. Maxsus turlar, qulay turar joy, unutilmas tajribalar. Biz bilan sayohat qiling va haqiqiy erkinlikni his qiling!"
+  },
+  "Recently": {
+    "title": "Oxirgi qilgan sayohatlar",
+    "description": "Oxirgi sayohat suratlari sizning oldingizda ulashiladi",
+    "loc1-name": "Xiva",
+    "loc1-des": " Oʻzbekiston Respublikasining Xorazm viloyatidagi shahar. Xiva tumani markazi. Oʻzbekistonning shimoliy gʻarbida, Xorazm viloyatning janubida, Amudaryoning chap sohilida, daryodan 40 km janubida, 95 m balandlikda joylashgan",
+    "loc2-name": "Samarqand",
+    "loc2-des": "Samarqand — Oʻzbekiston Respublikasi Samarqand viloyatidagi qadimiy shahar. Viloyatning maʼmuriy, iqtisodiy va madaniy markazi (1938-yildan). 1925-1930-yillarda Respublika poytaxti. Oʻzbekistonning janubi-gʻarbida, Zarafshon vodiysining markaziy qismida. ",
+    "loc3-name": "Buxoro",
+    "loc3-des": "Buxoro — Oʻzbekiston Respublikasining qadimiy shaharlaridan biri, Buxoro viloyatining maʼmuriy, iqtisodiy va madaniy markazi. O'zbekistonning ilk poytaxti. Buyuk ipаk yoʻlida yirik tijorat markazlaridan boʻlgan."
+  },
+  "Service": {
+    "title": "Biz har doim sizga eng yaxshi xizmatni taqdim etishga harakat qilamiz",
+    "description": "Biz bilan dunyoni kashf eting! Bizning sayyohlik agentligimiz sizning orzularingizni amalga oshiradi. Maxsus turlar, qulay turar joy, unutilmas tajribalar. Biz bilan sayohat qiling va haqiqiy erkinlikni his qiling!"
+  },
+  "Footer": {}
+}

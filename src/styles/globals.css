@@ -16,7 +16,17 @@
   }
 }
 
-body {
+.main-bg {
+  background-image: url("../assets/paris_background.jpg");
+  background-size: cover;
+}
+
+.react-tabs__tab-list {
+  border: none !important;
+}
+
+.react-tabs__tab--selected {
+  border: none !important;
 }
 
 .swiper {

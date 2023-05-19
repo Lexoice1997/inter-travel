@@ -1,12 +1,51 @@
 {
-  "Index": {
-    "title": "Home",
-    "description": "This is the home page."
+  "Header": {
+    "menu0": "Main",
+    "menu1": "Orders",
+    "menu2": "Top cities",
+    "menu3": "About us",
+    "menu4": "Service"
   },
-  "LocaleSwitcher": {
-    "switchLocale": "Switch to {locale, select, ru {Russian} en {English} other {Unknown}}"
+  "Main": {
+    "title": "Travel the world with us!",
+    "description": "Discover the world with us! Our travel agency will make your dreams come true. Tailor-made tours, comfortable accommodations, unforgettable experiences. Travel with us and experience true freedom!",
+    "button": "Explore"
   },
-  "PageLayout": {
-    "pageTitle": "next-intl"
-  }
+  "Order": {
+    "phone": "What is your phone number?",
+    "people": "How many people?",
+    "location": "Where do you wanna go?",
+    "date": "Where do you want to go there?",
+    "button": "Explore",
+    "popular": "Popular Searches",
+    "popular-locations": "Khiva, Samarkand, Bukhara, Muynak"
+  },
+  "Popular": {
+    "title": "Popular Destination",
+    "xiva": "Khiva",
+    "samarkand": "Samarkand",
+    "buxara": "Bukhara",
+    "uzbekistan": "Uzbekistan",
+    "trip": "Start trip"
+  },
+  "About": {
+    "title": "About Us",
+    "description": "We planned beautiful destination every weekend",
+    "info": "Discover the world with us! Our travel agency will make your dreams come true. Tailor-made tours, comfortable accommodations, unforgettable experiences. Travel with us and experience true freedom!"
+  },
+  "Recently": {
+    "title": "Recently Viewed Trips",
+    "description": "Some recent trip photos are shared in front of you.",
+    "loc1-name": "Khiva",
+    "loc1-des": "Khiva (Uzbek: Xiva/Хива, خىۋا; Persian: خیوه, Xīveh; alternative or historical names include Kheeva, Khorasam, Khoresm, Khwarezm, Khwarizm, Khwarazm, Chorezm, Arabic: خوارزم and Persian: خوارزم) is a district-level city of approximately 93,000 people in Xorazm Region, Uzbekistan.[2]",
+    "loc2-name": "Samarkand",
+    "loc2-des": "Samarkand or Samarqand, pronounced is a city in southeastern Uzbekistan and among the oldest continuously inhabited cities in Central Asia. ",
+    "loc3-name": "Bukhara",
+    "loc3-des": "Bukhara (Uzbek: Buxoro/Бухоро, pronounced [buχɒrɒ]; Tajik: Бухоро, pronounced [buxɔːˈɾɔː], Persian: بخارا) is the seventh-largest city in Uzbekistan, with a population of 280,187 as of 1 January 2020,[1] and the capital of Bukhara Region.[2]"
+  },
+  "Service": {
+    "title": "We always try to give you are best service",
+    "description": "Discover the world with us! Our travel agency will make your dreams come true. Tailor-made tours, comfortable accommodations, unforgettable experiences. Travel with us and experience true freedom!"
+  },
+  "Footer": {}
 }

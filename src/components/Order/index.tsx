@@ -1,6 +1,7 @@
 "use client";
 
 import { useFormik } from "formik";
+import { useTranslations } from "next-intl";
 import { Inter } from "next/font/google";
 import { useState } from "react";
 import DatePicker from "react-datepicker";
@@ -29,6 +30,7 @@ interface IForm {
 function Order() {
   const [location, setLocation] = useState();
   const [startDate, setStartDate] = useState<any>(new Date());
+  const t = useTranslations("Order");
   const formik = useFormik<IForm>({
     initialValues: {
       phone: "",
@@ -108,11 +110,11 @@ function Order() {
               <div className={`text-left  mt-2 text-xs font-semibold text-red-500`}>
                 {formik.errors.phone}
               </div>
-              <p className="text-gray-500 text-lg mt-2">What is your phone number?</p>
+              <p className="text-gray-500 text-lg mt-2">{t("phone")}</p>
             </div>
             <div className="w-full mb-4">
               <SelectField placeHolder="Location" options={LOCATIONS} onChange={handleLocation} />
-              <p className="text-gray-500 text-lg mt-2">Where do you wanna go?</p>
+              <p className="text-gray-500 text-lg mt-2">{t("location")}</p>
             </div>
           </div>
           <div className="sm:w-1/2 w-full">
@@ -134,7 +136,7 @@ function Order() {
               <div className={`text-left  mt-2 text-xs font-semibold text-red-500`}>
                 {formik.errors.phone}
               </div>
-              <p className="text-gray-500 text-lg mt-2">How many people?</p>
+              <p className="text-gray-500 text-lg mt-2">{t("people")}</p>
             </div>
             <div className="w-full mt-2">
               <DatePicker
@@ -142,7 +144,7 @@ function Order() {
                 onChange={(date: any) => setStartDate(date)}
                 className="p-[14px] border rounded-md w-full outline-none border-gray-300 mb-2"
               />
-              <p className="text-gray-500 text-lg">Where do you want to go there?</p>
+              <p className="text-gray-500 text-lg">{t("date")}</p>
             </div>
           </div>
         </div>
@@ -151,14 +153,14 @@ function Order() {
           type="submit"
           className="block mx-auto mt-8 text-semibold sm:text-3xl text-2xl text-white bg-blue-500 sm:px-40 px-16 py-4 rounded-xl hover:bg-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150"
         >
-          Explore
+          {t("button")}
         </button>
       </form>
 
       <div className="mt-6">
         <h3 className="text-xl sm:text-3xl">
-          Popular Searches:{" "}
-          <span className="text-gray-500">Hiking, Starbucks, Fishing, Hotels</span>
+        {t("popular")}:{" "}
+          <span className="text-gray-500">{t("popular-locations")}</span>
         </h3>
       </div>
     </section>

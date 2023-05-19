@@ -1,6 +1,7 @@
 "use client";
-import { slide as Menu } from "react-burger-menu";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { slide as Menu } from "react-burger-menu";
 const styles = {
   bmBurgerButton: {
     position: "fixed",
@@ -58,6 +59,7 @@ type Props = {
 };
 
 function BurgerMenu({ isOpen, close }: Props) {
+  const t = useTranslations("Header");
   return (
     <Menu
       className=""
@@ -78,7 +80,7 @@ function BurgerMenu({ isOpen, close }: Props) {
               id="home"
               className="block font-medium text-gray-500 transition-all cursor-pointer group-hover:text-primary-500 text-md menu-item"
             >
-              Главная
+              {t("menu0")}
             </a>
           </div>
 
@@ -89,7 +91,7 @@ function BurgerMenu({ isOpen, close }: Props) {
               id="about"
               className="block font-medium text-gray-500 transition-all cursor-pointer group-hover:text-primary-500 text-md menu-item"
             >
-              О нас
+              {t("menu1")}
             </a>
           </div>
 
@@ -99,7 +101,7 @@ function BurgerMenu({ isOpen, close }: Props) {
               href="#review"
               className="block font-medium text-gray-500 transition-all cursor-pointer group-hover:text-primary-500 text-md menu-item--small"
             >
-              Отзывы клиентов
+              {t("menu2")}
             </a>
           </div>
 
@@ -109,7 +111,16 @@ function BurgerMenu({ isOpen, close }: Props) {
               href="#questions"
               className="block font-medium text-gray-500 transition-all cursor-pointer group-hover:text-primary-500 text-md menu-item--small"
             >
-              Контакты
+              {t("menu3")}
+            </a>
+          </div>
+          <div className="flex flex-row items-center space-x-4 group flex-nowrap">
+            <a
+              onClick={() => close()}
+              href="#questions"
+              className="block font-medium text-gray-500 transition-all cursor-pointer group-hover:text-primary-500 text-md menu-item--small"
+            >
+              {t("menu4")}
             </a>
           </div>
         </div>

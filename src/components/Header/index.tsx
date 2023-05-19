@@ -1,30 +1,50 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { useState } from "react";
+import type { ReactTabsFunctionComponent, TabProps } from "react-tabs";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 import logo from "../../../public/logo_black_text.svg";
 import BurgerMenu from "../BurgerMenu";
-import React, { useState } from "react";
 
 function Header() {
   const [sidebar, setSibeBar] = useState<boolean>(false);
   const [navbar, setNavbar] = useState(false);
+  const t = useTranslations("Header");
 
-  const disableScroll = () => {
-  };
-  const enableScroll = () => {
-  };
-
-  const chnagebackground = () => {
-
-  };
+  const disableScroll = () => {};
+  const enableScroll = () => {};
 
   return (
-    <header className="py-5 sm:py-8 flex justify-between items-center">
+    <header className="flex justify-between items-center">
       <Image
         src={logo}
         alt="Logo"
         className="hover:cursor-pointer sm:w-[150px] sm:h-[150px] w-[120px] h-[120px]"
       />
+      <Tabs>
+        <TabList>
+          <Tab>
+            <Link href="/" locale="uz">
+              Uzb
+            </Link>
+          </Tab>
+          <Tab>
+            <Link href="/" locale="ru">
+              Rus
+            </Link>
+          </Tab>
+          <Tab>
+            <Link href="/" locale="en">
+              Eng
+            </Link>
+          </Tab>
+        </TabList>
+      </Tabs>
       <nav>
         <button
           onClick={() => (setSibeBar(true), disableScroll())}
@@ -45,22 +65,22 @@ function Header() {
             ></path>
           </svg>
         </button>
-        <BurgerMenu
-          isOpen={sidebar}
-          close={() => (setSibeBar(false), enableScroll())}
-        />
-        <ul className="sm:flex justify-between items-center lg:text-lg text-gray-600 md:text-base hidden">
+        <BurgerMenu isOpen={sidebar} close={() => (setSibeBar(false), enableScroll())} />
+        <ul className="sm:flex justify-between items-center lg:text-lg text-white md:text-base hidden">
           <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            Explore
+            {t("menu0")}
           </li>
           <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            Top Cities
+            {t("menu1")}
           </li>
           <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            Blog
+            {t("menu2")}
           </li>
-          <li className="hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            Help
+          <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            {t("menu3")}
+          </li>
+          <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            {t("menu4")}
           </li>
         </ul>
       </nav>
