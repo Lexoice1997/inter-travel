@@ -66,20 +66,20 @@ function Header() {
         </button>
         <BurgerMenu isOpen={sidebar} close={() => (setSibeBar(false), enableScroll())} />
         <ul className="sm:flex justify-between items-center lg:text-lg text-white md:text-base hidden">
-          <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            {t("menu0")}
+          <li className="text-white mr-8 hover:text-greenColor hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <a href="#main">{t("menu0")}</a>
           </li>
-          <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            {t("menu1")}
+          <li className="mr-8 hover:text-greenColor hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <a href="#orders">{t("menu1")}</a>
           </li>
-          <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            {t("menu2")}
+          <li className="mr-8 hover:text-greenColor hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <a href="#cities">{t("menu2")}</a>
           </li>
-          <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            {t("menu3")}
+          <li className="mr-8 hover:text-greenColor hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <a href="#about">{t("menu3")}</a>
           </li>
-          <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            {t("menu4")}
+          <li className="mr-8 hover:text-greenColor hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <a href="#service">{t("menu4")}</a>
           </li>
         </ul>
       </nav>

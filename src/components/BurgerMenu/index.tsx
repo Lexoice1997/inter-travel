@@ -76,7 +76,6 @@ function BurgerMenu({ isOpen, close }: Props) {
             <a
               onClick={() => close()}
               href="#main"
-              id="home"
               className="block font-medium text-gray-500 transition-all cursor-pointer group-hover:text-primary-500 text-md menu-item"
             >
               {t("menu0")}
@@ -87,7 +86,6 @@ function BurgerMenu({ isOpen, close }: Props) {
             <a
               onClick={() => close()}
               href="#service"
-              id="about"
               className="block font-medium text-gray-500 transition-all cursor-pointer group-hover:text-primary-500 text-md menu-item"
             >
               {t("menu1")}
