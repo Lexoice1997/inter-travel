@@ -6,6 +6,11 @@ import React from 'react'
 
 function Main() {
   const t = useTranslations('Main')
+  const scrollDown = () => {
+    const orderForm = document.querySelector('#order-form')!
+    orderForm.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <section className="flex flex-col lg:justify-between lg:flex-row">
       <div className="lg:mr-4 lg:mt-24 mt-20 lg:w-1/2 w-full ">
@@ -18,15 +23,17 @@ function Main() {
         <div className="flex justify-center lg:justify-start">
           <button
             className={`bg-[#4D6D44] text-white mt-4 p-4 text-lg rounded-lg hover:bg-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150 ${manrope.className}`}
-            onClick={() => {
-              const orderForm = document.querySelector('#order-form')!
-              // scroll to form
-              orderForm.scrollIntoView({ behavior: 'smooth' })
-            }}
+            onClick={scrollDown}
           >
             {t('button')}
           </button>
         </div>
+
+        <button className="scroll-down" onClick={scrollDown}>
+          <span className="scroll-mouse">
+            <span className="scroll-wheel" />
+          </span>
+        </button>
       </div>
       {/* <div className="flex justify-between sm:mt-16 mt-10">
         <div className="sm:mr-2 mr-6 sm:block hidden">

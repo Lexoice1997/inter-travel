@@ -17,7 +17,7 @@
 }
 
 .main-bg {
-  background-image: url("../assets/paris_background.jpg");
+  background-image: url('../assets/paris_background.jpg');
   background-size: cover;
 }
 
@@ -48,4 +48,84 @@
   width: 20px !important;
   height: 20px !important;
   background-color: #6366f1 !important;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  -webkit-transform: translate(-50%, -50%);
+  transition: opacity 600ms;
+  transform: translate(-50%, -50%);
+}
+.scroll-mouse {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 54px;
+  margin: 0 auto;
+  border: 2px solid #fff;
+  border-radius: 20px;
+}
+.scroll-wheel {
+  position: absolute;
+  top: 14px;
+  left: 13px;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-animation: scrollDown 2.5s infinite;
+  animation: scrollDown 2.5s infinite;
+}
+
+@-webkit-keyframes scrollDown {
+  0% {
+    top: 14px;
+    opacity: 0;
+  }
+  15% {
+    top: 14px;
+    opacity: 1;
+  }
+  30% {
+    top: 14px;
+    opacity: 1;
+  }
+  45% {
+    top: 34px;
+    opacity: 1;
+  }
+  100% {
+    top: 34px;
+    opacity: 0;
+  }
+}
+@keyframes scrollDown {
+  0% {
+    top: 14px;
+    opacity: 0;
+  }
+  15% {
+    top: 14px;
+    opacity: 1;
+  }
+  30% {
+    top: 14px;
+    opacity: 1;
+  }
+  45% {
+    top: 34px;
+    opacity: 1;
+  }
+  100% {
+    top: 34px;
+    opacity: 0;
+  }
 }
