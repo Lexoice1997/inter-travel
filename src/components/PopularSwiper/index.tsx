@@ -55,9 +55,9 @@ function PopularSwiper() {
               {t('uzbekistan')}
             </p>
             <div className="flex justify-between mt-5">
-              <p className="sm:text-xl text-lg text-indigo-600">120.000 sum</p>
+              <p className="sm:text-xl text-lg text-[#4D6D44]">120.000 sum</p>
               <button
-                className="py-1 px-3 bg-indigo-500 text-white rounded-md hover:bg-indigo-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150"
+                className="py-1 px-3  text-white rounded-md bg-[#4D6D44] hover:bg-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150"
                 onClick={() => onClick(3)}
               >
                 {t('trip')}
@@ -79,9 +79,9 @@ function PopularSwiper() {
               {t('uzbekistan')}
             </p>
             <div className="flex justify-between mt-5">
-              <p className="sm:text-xl text-lg text-indigo-600">600.000 sum</p>
+              <p className="sm:text-xl text-lg text-[#4D6D44]">600.000 sum</p>
               <button
-                className="py-1 px-3 bg-indigo-500 text-white rounded-md hover:bg-indigo-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150"
+                className="py-1 px-3 bg-[#4D6D44] hover:bg-[#66915A] text-white rounded-md hover:cursor-pointer hover:transition-all transition ease-in-out delay-150"
                 onClick={() => onClick(4)}
               >
                 {t('trip')}
@@ -103,9 +103,9 @@ function PopularSwiper() {
               {t('uzbekistan')}
             </p>
             <div className="flex justify-between mt-5">
-              <p className="sm:text-xl text-lg text-indigo-600">450.000 sum</p>
+              <p className="sm:text-xl text-lg text-[#4D6D44]">450.000 sum</p>
               <button
-                className="py-1 px-3 bg-indigo-500 text-white rounded-md hover:bg-indigo-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150"
+                className="py-1 px-3 bg-[#4D6D44] hover:bg-[#66915A] text-white rounded-md hover:cursor-pointer hover:transition-all transition ease-in-out delay-150"
                 onClick={() => onClick(5)}
               >
                 {t('trip')}
@@ -119,7 +119,7 @@ function PopularSwiper() {
             <h3 className="text-2xl sm:text-3xl font-semibold mt-5">Alhambra</h3>
             <p className="text-lg sm:text-xl font-semibold text-gray-500 mt-5">Spain</p>
             <div className="flex justify-between mt-5">
-              <p className="sm:text-xl text-lg text-indigo-600">$350.00</p>
+              <p className="sm:text-xl text-lg text-[#4D6D44]">$350.00</p>
               <button className="py-1 px-3 bg-indigo-500 text-white rounded-md hover:bg-indigo-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
                 Start trip
               </button>
@@ -132,7 +132,7 @@ function PopularSwiper() {
             <h3 className="text-2xl sm:text-3xl font-semibold mt-5">Alhambra</h3>
             <p className="text-lg sm:text-xl font-semibold text-gray-500 mt-5">Spain</p>
             <div className="flex justify-between mt-5">
-              <p className="sm:text-xl text-lg text-indigo-600">$350.00</p>
+              <p className="sm:text-xl text-lg text-[#4D6D44]">$350.00</p>
               <button className="py-1 px-3 bg-indigo-500 text-white rounded-md hover:bg-indigo-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
                 Start trip
               </button>
@@ -145,7 +145,7 @@ function PopularSwiper() {
             <h3 className="text-2xl sm:text-3xl font-semibold mt-5">Alhambra</h3>
             <p className="text-lg sm:text-xl font-semibold text-gray-500 mt-5">Spain</p>
             <div className="flex justify-between mt-5">
-              <p className="sm:text-xl text-lg text-indigo-600">$350.00</p>
+              <p className="sm:text-xl text-lg text-[#4D6D44]">$350.00</p>
               <button className="py-1 px-3 bg-indigo-500 text-white rounded-md hover:bg-indigo-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
                 Start trip
               </button>
@@ -158,7 +158,7 @@ function PopularSwiper() {
             <h3 className="text-2xl sm:text-3xl font-semibold mt-5">Alhambra</h3>
             <p className="text-lg sm:text-xl font-semibold text-gray-500 mt-5">Spain</p>
             <div className="flex justify-between mt-5">
-              <p className="sm:text-xl text-lg text-indigo-600">$350.00</p>
+              <p className="sm:text-xl text-lg text-[#4D6D44]">$350.00</p>
               <button className="py-1 px-3 bg-indigo-500 text-white rounded-md hover:bg-indigo-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
                 Start trip
               </button>

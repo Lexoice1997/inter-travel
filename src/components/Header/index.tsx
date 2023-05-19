@@ -1,55 +1,58 @@
-"use client";
+'use client'
 
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import React, { useState } from "react";
-import type { ReactTabsFunctionComponent, TabProps } from "react-tabs";
-import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
-import logo from "../../../public/logo_black_text.svg";
-import BurgerMenu from "../BurgerMenu";
+import { useTranslations } from 'next-intl'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import React, { useState } from 'react'
+import type { ReactTabsFunctionComponent, TabProps } from 'react-tabs'
+import { Tab, TabList, TabPanel, Tabs } from 'react-tabs'
+import 'react-tabs/style/react-tabs.css'
+import logo from '../../../public/logo_black_text.svg'
+import BurgerMenu from '../BurgerMenu'
+import { manrope } from '@/pages'
 
 function Header() {
-  const [sidebar, setSibeBar] = useState<boolean>(false);
-  const [navbar, setNavbar] = useState(false);
-  const t = useTranslations("Header");
+  const [sidebar, setSibeBar] = useState<boolean>(false)
+  const [navbar, setNavbar] = useState(false)
+  const t = useTranslations('Header')
 
-  const disableScroll = () => {};
-  const enableScroll = () => {};
+  const disableScroll = () => {}
+  const enableScroll = () => {}
 
   return (
-    <header className="flex justify-between items-center">
+    <header
+      className={`flex justify-between items-center ${manrope.className}`}
+    >
       <Image
         src={logo}
         alt="Logo"
         className="hover:cursor-pointer sm:w-[150px] sm:h-[150px] w-[120px] h-[120px]"
       />
-      <Tabs>
-        <TabList>
-          <Tab>
-            <Link href="/" locale="en">
-              Eng
-            </Link>
-          </Tab>
-          <Tab>
-            <Link href="/" locale="uz">
-              Uzb
-            </Link>
-          </Tab>
-          <Tab>
-            <Link href="/" locale="ru">
-              Rus
-            </Link>
-          </Tab>
-        </TabList>
-      </Tabs>
+      <Tabs className="text-white visible lg:hidden">
+          <TabList>
+            <Tab>
+              <Link href="/" locale="en">
+                Eng
+              </Link>
+            </Tab>
+            <Tab>
+              <Link href="/" locale="uz">
+                Uzb
+              </Link>
+            </Tab>
+            <Tab>
+              <Link href="/" locale="ru">
+                Rus
+              </Link>
+            </Tab>
+          </TabList>
+        </Tabs>
       <nav>
         <button
           onClick={() => (setSibeBar(true), disableScroll())}
           className={
-            " !bg-transparent !text-primary-900 !p-2 rounded-md hover:bg-transparent sm:hidden block"
+            ' !bg-transparent !text-primary-900 !p-2 rounded-md hover:bg-transparent sm:hidden block'
           }
         >
           <svg
@@ -65,27 +68,49 @@ function Header() {
             ></path>
           </svg>
         </button>
-        <BurgerMenu isOpen={sidebar} close={() => (setSibeBar(false), enableScroll())} />
-        <ul className="sm:flex justify-between items-center lg:text-lg text-white md:text-base hidden">
-          <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            {t("menu0")}
+        <BurgerMenu
+          isOpen={sidebar}
+          close={() => (setSibeBar(false), enableScroll())}
+        />
+        <Tabs className="text-white visible max-md:hidden">
+          <TabList>
+            <Tab>
+              <Link href="/" locale="en">
+                Eng
+              </Link>
+            </Tab>
+            <Tab>
+              <Link href="/" locale="uz">
+                Uzb
+              </Link>
+            </Tab>
+            <Tab>
+              <Link href="/" locale="ru">
+                Rus
+              </Link>
+            </Tab>
+          </TabList>
+        </Tabs>
+        {/* <ul className="sm:flex justify-between items-center lg:text-lg text-white md:text-base hidden">
+          <li className="mr-8 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            {t('menu0')}
           </li>
-          <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            {t("menu1")}
+          <li className="mr-8 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            {t('menu1')}
           </li>
-          <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            {t("menu2")}
+          <li className="mr-8 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            {t('menu2')}
           </li>
-          <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            {t("menu3")}
+          <li className="mr-8 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            {t('menu3')}
           </li>
-          <li className="mr-8 hover:text-blue-500 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-            {t("menu4")}
+          <li className="mr-8 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            {t('menu4')}
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header

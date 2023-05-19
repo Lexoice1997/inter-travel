@@ -228,7 +228,7 @@ function Order({ products }: any) {
         <button
           type="submit"
           disabled={loading}
-          className={`block mx-auto mt-8 text-semibold sm:text-3xl text-2xl text-white bg-blue-500 sm:px-40 px-16 py-4 rounded-xl hover:bg-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150 ${
+          className={`block mx-auto mt-8 text-semibold sm:text-3xl text-2xl text-white bg-[#4D6D44] hover:bg-[#66915A] sm:px-40 px-16 py-4 rounded-xl hover:cursor-pointer hover:transition-all transition ease-in-out delay-150 ${
             loading && 'opacity-50 cursor-not-allowed'
           }`}
         >

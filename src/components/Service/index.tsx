@@ -43,15 +43,15 @@ function Service() {
         <p className="font-md text-gray-500 mt-8">{t("description")}</p>
         <div className="flex justify-between sm:w-1/2 m-auto sm:mt-10 mt-6">
           <div>
-            <h3 className="text-blue-400 sm:text-4xl text-3xl font-semibold text-center">4.5k+</h3>
+            <h3 className="text-[#4D6D44] sm:text-4xl text-3xl font-semibold text-center">4.5k+</h3>
             <p className="mt-2 text-md">Our Explores</p>
           </div>
           <div>
-            <h3 className="text-blue-400 sm:text-4xl text-3xl font-semibold text-center">15k+</h3>
+            <h3 className="text-[#4D6D44] sm:text-4xl text-3xl font-semibold text-center">15k+</h3>
             <p className="mt-2 text-md">Destinations</p>
           </div>
           <div>
-            <h3 className="text-blue-400 sm:text-4xl text-3xl font-semibold text-center">35k+</h3>
+            <h3 className="text-[#4D6D44] sm:text-4xl text-3xl font-semibold text-center">35k+</h3>
             <p className="mt-2 text-md">Year Experience</p>
           </div>
         </div>

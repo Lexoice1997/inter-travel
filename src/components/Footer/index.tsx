@@ -33,19 +33,19 @@ function Footer() {
         </h3>
         <nav className="mt-6">
           <ul className="text-gray-500 font-2xl">
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Home
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Explore
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Blog
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Cities
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Help
             </li>
           </ul>
@@ -57,22 +57,22 @@ function Footer() {
         </h3>
         <nav className="mt-6">
           <ul className="text-gray-500 font-2xl">
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Destination
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               About Us
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Things
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Recently Trip
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Best Sevice
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Discount
             </li>
           </ul>
@@ -84,16 +84,16 @@ function Footer() {
         </h3>
         <nav className="mt-6">
           <ul className="text-gray-500 font-2xl">
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               +123 456 789
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Explore
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               info@Travellian.com
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               1245, New Yorkm USA
             </li>
           </ul>
