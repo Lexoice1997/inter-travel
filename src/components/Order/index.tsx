@@ -1,9 +1,11 @@
 "use client";
 
+import axios from "axios";
 import { useFormik } from "formik";
 import { useTranslations } from "next-intl";
 import { Inter } from "next/font/google";
-import { useState } from "react";
+import { redirect } from "next/navigation";
+import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import toast from "react-hot-toast";
@@ -23,16 +25,38 @@ const LOCATIONS = [
 const token = process.env.TELEGRAM_TOKEN;
 
 interface IForm {
+  first_name: string;
+  last_name: string;
   phone: string;
   people: string;
 }
 
-function Order() {
+interface OrderProps {
+  id: number;
+  city: string;
+  country: string;
+}
+
+function Order({ products }: any) {
   const [location, setLocation] = useState();
   const [startDate, setStartDate] = useState<any>(new Date());
   const t = useTranslations("Order");
+  const [locations, setLocations] = useState();
+
+  useEffect(() => {
+    const res = products.map((item: any) => {
+      let obj: any = {};
+      obj.value = item.id;
+      obj.label = item.city;
+      return obj;
+    });
+    setLocations(res);
+  }, [products]);
+
   const formik = useFormik<IForm>({
     initialValues: {
+      first_name: "",
+      last_name: "",
       phone: "",
       people: "",
     },
@@ -46,7 +70,8 @@ function Order() {
     onSubmit: async (values: IForm) => {
       try {
         const payload = `
-        Путешествуйте с нами!%0A%0AНомер Телефона: +${
+        Путешествуйте с нами!%0A
+        %0AИмя: ${values.first_name}%0AФамилия: ${values.last_name}%0AНомер Телефона: +${
           values.phone
         }%0AЛокация: ${location}%0AЧисло туристов: ${
           values.people
@@ -56,6 +81,26 @@ function Order() {
         const sendReq = await fetch(
           `https://api.telegram.org/bot${token}/sendmessage?chat_id=${`1282417766`}&parse_mode=html&text=${payload}`
         );
+        try {
+          const sendOrder = await axios.post(
+            `https://sozle.qaraqalpaq.org/inter-travel/transactions`,
+            {
+              first_name: values.first_name,
+              last_name: values.last_name,
+              phone: values.phone,
+              product_id: location,
+              date: startDate,
+              people: values.people,
+            }
+          );
+          console.log(sendOrder);
+          window.location.replace(
+            `https://my.click.uz/services/pay?service_id=28015&merchant_id=20412&amount=${sendOrder.data.amount}&transaction_param=${sendOrder.data.transaction_id}`
+          );
+        } catch {
+          toast.success("Произошла ошибка отправки данных.");
+        }
+
         toast.success("Ваша заявка принята.");
       } catch (error) {
         toast.success("Произошла ошибка.");
@@ -65,32 +110,57 @@ function Order() {
     },
   });
 
-  // const handlePhone = (e: ChangeEvent<HTMLInputElement>) => {
-  //   setPhone(e.target.value);
-  // };
-
-  // const handlePeople = (e: ChangeEvent<HTMLInputElement>) => {
-  //   setPeople(e.target.value);
-  // };
-
   const handleLocation = (e: any) => {
-    setLocation(e.label);
+    console.log(e);
+    setLocation(e.value);
   };
-
-  // const fetchBot = async () => {
-  //   const payload = `
-  //       Путешествуйте с нами!%0A%0AНомер Телефона: +${phone}%0AЛокация: ${location}%0AЧисло туристов: ${people}%0AДата путешествие: +${startDate.getFullYear()}-${startDate.getMonth()}-${startDate.getDate()}
-  //   %0A
-  //       `;
-  //   const sendReq = await fetch(
-  //     `https://api.telegram.org/bot${token}/sendmessage?chat_id=${`1282417766`}&parse_mode=html&text=${payload}`
-  //   );
-  // };
 
   return (
     <section className="sm:mt-24 mt-16">
       <form className={`bg-white p-8 rounded-xl ${inter.className}`} onSubmit={formik.handleSubmit}>
         <div className="flex justify-between sm:flex-row flex-col items-start ">
+          <div className="sm:w-1/2 w-full sm:mr-10 mr-0">
+            <div className="w-full mb-4 sm:mr-10 mr-0">
+              <input
+                id="first_name"
+                name="first_name"
+                type="text"
+                className={`border-gray-400 border rounded-md w-full p-[14px] outline-none sm:mr-10 mr-0 ${
+                  formik.touched.first_name &&
+                  formik.errors.first_name &&
+                  'border-red-500 "[&>*]:text-red-500'
+                }`}
+                placeholder="Azamat"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.first_name}
+              />
+              <div className={`text-left  mt-2 text-xs font-semibold text-red-500`}>
+                {formik.errors.first_name}
+              </div>
+              <p className="text-gray-500 text-lg mt-2">{t("first_name")}</p>
+            </div>
+            <div className="w-full mb-4 sm:mr-10 mr-0">
+              <input
+                id="last_name"
+                name="last_name"
+                type="text"
+                className={`border-gray-400 border rounded-md w-full p-[14px] outline-none sm:mr-10 mr-0 ${
+                  formik.touched.last_name &&
+                  formik.errors.last_name &&
+                  'border-red-500 "[&>*]:text-red-500'
+                }`}
+                placeholder="Berdimuratov"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.last_name}
+              />
+              <div className={`text-left mt-2 text-xs font-semibold text-red-500`}>
+                {formik.errors.last_name}
+              </div>
+              <p className="text-gray-500 text-lg mt-2">{t("last_name")}</p>
+            </div>
+          </div>
           <div className="sm:w-1/2 w-full sm:mr-10 mr-0">
             <div className="w-full mb-4 sm:mr-10 mr-0">
               <input
@@ -107,13 +177,13 @@ function Order() {
                 onBlur={formik.handleBlur}
                 value={formik.values.phone}
               />
-              <div className={`text-left  mt-2 text-xs font-semibold text-red-500`}>
+              <div className={`text-left mt-2 text-xs font-semibold text-red-500`}>
                 {formik.errors.phone}
               </div>
               <p className="text-gray-500 text-lg mt-2">{t("phone")}</p>
             </div>
             <div className="w-full mb-4">
-              <SelectField placeHolder="Location" options={LOCATIONS} onChange={handleLocation} />
+              <SelectField placeHolder="Location" options={locations} onChange={handleLocation} />
               <p className="text-gray-500 text-lg mt-2">{t("location")}</p>
             </div>
           </div>
@@ -159,8 +229,7 @@ function Order() {
 
       <div className="mt-6">
         <h3 className="text-xl sm:text-3xl">
-        {t("popular")}:{" "}
-          <span className="text-gray-500">{t("popular-locations")}</span>
+          {t("popular")}: <span className="text-gray-500">{t("popular-locations")}</span>
         </h3>
       </div>
     </section>

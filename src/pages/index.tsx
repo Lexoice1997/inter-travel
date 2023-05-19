@@ -7,7 +7,7 @@ import Order from "@/components/Order";
 import Popular from "@/components/Popular";
 import Recently from "@/components/Recently";
 import Service from "@/components/Service";
-import { GetStaticPropsContext } from "next";
+import { GetServerSideProps, GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
 import { Inter, Kalam } from "next/font/google";
 import { Toaster } from "react-hot-toast";
@@ -22,7 +22,7 @@ export const metadata = {
   description: "You can give us a tour to Remember forever!",
 };
 
-export default function Index() {
+export default function Index({ locations }: any) {
   return (
     <main className={`bg-gray-100 ${inter.className}`}>
       <div id="taost-wrapper">
@@ -36,7 +36,7 @@ export default function Index() {
       </div>
 
       <div className="m-auto px-4 xl:max-w-[1440px] lg:max-w-[1280px]">
-        <Order />
+        <Order products={locations.products} />
         <Popular />
         <About />
         <Recently />
@@ -48,10 +48,21 @@ export default function Index() {
   );
 }
 
+// export async function getServerSideProps() {
+//   const res = await fetch("https://sozle.qaraqalpaq.org/inter-travel/products");
+//   const locations = await res.json();
+
+//   return { props: { locations } };
+// }
+
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  const res = await fetch("https://sozle.qaraqalpaq.org/inter-travel/products");
+  const locations = await res.json();
+
   return {
     props: {
       messages: (await import(`../../messages/${locale}.json`)).default,
+      locations,
     },
   };
 }

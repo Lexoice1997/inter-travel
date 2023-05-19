@@ -12,6 +12,8 @@
     "button": "Buyurtma qilish"
   },
   "Order": {
+    "first_name": "Atinigiz?",
+    "last_name": "Familiyangiz?",
     "phone": "Telefon raqam?",
     "people": "Nechta kishi?",
     "location": "Qayerga?",

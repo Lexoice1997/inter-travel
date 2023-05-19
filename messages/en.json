@@ -12,6 +12,8 @@
     "button": "Explore"
   },
   "Order": {
+    "first_name": "What is your name?",
+    "last_name": "What is you surname?",
     "phone": "What is your phone number?",
     "people": "How many people?",
     "location": "Where do you wanna go?",

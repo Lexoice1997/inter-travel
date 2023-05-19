@@ -29,6 +29,11 @@ function Header() {
       <Tabs>
         <TabList>
           <Tab>
+            <Link href="/" locale="en">
+              Eng
+            </Link>
+          </Tab>
+          <Tab>
             <Link href="/" locale="uz">
               Uzb
             </Link>
@@ -36,11 +41,6 @@ function Header() {
           <Tab>
             <Link href="/" locale="ru">
               Rus
-            </Link>
-          </Tab>
-          <Tab>
-            <Link href="/" locale="en">
-              Eng
             </Link>
           </Tab>
         </TabList>
