@@ -10,6 +10,7 @@ import Service from "@/components/Service";
 import { GetServerSideProps, GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
 import { Inter, Kalam } from "next/font/google";
+import Head from "next/head";
 import { Toaster } from "react-hot-toast";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -25,6 +26,10 @@ export const metadata = {
 export default function Index({ locations }: any) {
   return (
     <main className={`bg-gray-100 ${inter.className}`}>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </Head>
       <div id="taost-wrapper">
         <Toaster position="top-center" />
       </div>
