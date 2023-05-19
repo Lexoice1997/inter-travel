@@ -29,19 +29,19 @@ function Footer() {
         <nav className="mt-6">
           <ul className="text-gray-500 font-2xl">
             <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-              <a href="#main">{t("menu0")}</a>
+              Home
             </li>
             <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-              <a href="#orders">{t("menu1")}</a>
+              Explore
             </li>
             <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-              <a href="#cities">{t("menu2")}</a>
+              Blog
             </li>
             <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-              <a href="#about">{t("menu3")}</a>
+              Cities
             </li>
             <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-              <a href="#service">{t("menu4")}</a>
+              Help
             </li>
           </ul>
         </nav>
@@ -52,22 +52,22 @@ function Footer() {
         </h3>
         <nav className="mt-6">
           <ul className="text-gray-500 font-2xl">
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Destination
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               About Us
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Things
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Recently Trip
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Best Sevice
             </li>
-            <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               Discount
             </li>
           </ul>
@@ -78,13 +78,16 @@ function Footer() {
         <nav className="mt-6">
           <ul className="text-gray-500 font-2xl">
             <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-              <a href="tel:+998937773999">+998 (93) 777-39-99</a>
+              +123 456 789
             </li>
             <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
+              Explore
+            </li>
+            <li className="mt-4 hover:text-[#66915A] hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
               info@Travellian.com
             </li>
             <li className="mt-4 hover:text-blue-700 hover:cursor-pointer hover:transition-all transition ease-in-out delay-150">
-              {t("address")}
+              1245, New Yorkm USA
             </li>
           </ul>
         </nav>

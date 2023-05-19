@@ -1,6 +1,5 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
 import { slide as Menu } from "react-burger-menu";
 const styles = {
   bmBurgerButton: {
